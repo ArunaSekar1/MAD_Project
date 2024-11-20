@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Section with Steps -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="@drawable/bg_header">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment"
+                android:layout_marginStart="24dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Offer Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/bg_offer">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_offer_tag"
+                app:tint="#FF5722" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5% off* with Axis Bank Buzz Credit Card"
+                android:textColor="#FF5722"
+                android:layout_marginStart="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TC"
+                android:textColor="#FF5722"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- View All Offers -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View All Offers"
+            android:textColor="#00796B"
+            android:textSize="14sp"
+            android:paddingBottom="16dp" />
+
+        <!-- Suggested for you -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suggested for you"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:paddingBottom="8dp"
+            android:textColor="#00796B" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Google Pay UPI"
+                android:textColor="#00796B" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Union Bank of India\n65** **** **** 2412"
+                android:textColor="#00796B" />
+        </RadioGroup>
+
+        <!-- All other options -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All other options"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#00796B"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="UPI"
+                android:textColor="#00796B" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Credit / Debit / ATM Card"
+                android:textColor="#00796B" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Net Banking"
+                android:textColor="#00796B" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="EMI (Easy Installments)"
+                android:textColor="#00796B" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Cash on Delivery"
+                android:textColor="#00796B" />
+        </RadioGroup>
+
+        <!-- Price and Continue Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹74,990"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#FF5722" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Continue"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/rounded_button"
+                android:layout_marginStart="16dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
