@@ -1,51 +1,90 @@
-# AR + Blockchain Ecommerce Application
+### **Procedure to Develop an AR-Based E-commerce App Using Android Studio**  
 
-An innovative ecommerce application that combines Augmented Reality (AR) and Blockchain technologies to provide a unique shopping experience.
+**1. Define Project Requirements**  
+   - Decide on the product categories and features for AR visualization (e.g., furniture, apparel).  
+   - Define app features such as AR integration, user login, product browsing, and payment gateway.  
 
-## Preview
+---
 
-![Preview Image 1](https://user-images.githubusercontent.com/90695071/181933417-28928579-1f7d-4cce-9e8a-937374d17a81.png)
-![Preview Image 2](https://user-images.githubusercontent.com/90695071/181933432-c2d18d1c-9419-407e-aa61-ba0f000d3990.png)
+**2. Set Up Android Studio Environment**  
+   - Install the latest version of Android Studio.  
+   - Set up a new project with a minimum SDK version compatible with ARCore (Android 7.0 or above).  
+   - Configure the project to use Kotlin or Java as the development language.  
 
-## Features
+---
 
-- Purchase products from any website using Metamask on Ropsten TestNet.
-- Transfer products within the platform.
-- Enjoy 3D rendering of products on mobile using the app.
-- Use AR by scanning QR codes from the website for immersive product views.
-- Participate in a reward system that includes lottery-based rewards for buyers.
-- Basic Seller GUI for warranty verification, auctions, and withdrawals.
+**3. Integrate ARCore SDK**  
+   - Add ARCore dependency in the `build.gradle` file:  
+     ```gradle
+     implementation 'com.google.ar:core:1.x.x'
+     ```  
+   - Include ARCore libraries and permissions in the `AndroidManifest.xml`.  
+     ```xml
+     <uses-permission android:name="android.permission.CAMERA" />
+     <uses-feature android:name="android.hardware.camera.ar" android:required="true" />
+     ```  
 
-## Usage
+---
 
-1. Download and install the embedded APK for your Android device. Make sure Google Play Services AR app is installed: [APK Link](https://drive.google.com/file/d/1Eey42zd1rLolW-Obn_VLPPrjip7FPn8n/view?usp=sharing)
-   OR
-2. Clone the repository in Android Studio and run the project.
-   OR
-3. Download the ZIP file and open the project in Android Studio.
+**4. Set Up 3D Models**  
+   - Design or download 3D models of the products in compatible formats like `.glb` or `.gltf`.  
+   - Store models locally in the app or host them on a server for dynamic loading.  
 
-## Contributors
+---
 
-### Android Application (AR)
+**5. Implement AR Functionality**  
+   - Use `ArFragment` to set up the AR interface.  
+   - Enable plane detection for placing 3D objects in real-world environments.  
+   - Load and render 3D models using Sceneform:  
+     ```kotlin
+     val renderableFuture = ModelRenderable.builder()
+         .setSource(context, Uri.parse("model.gltf"))
+         .build()
+         .thenAccept { renderable -> modelRenderable = renderable }
+         .exceptionally { throwable -> /* Handle errors */ }
+     ```  
+   - Allow users to place, rotate, and scale the models.  
 
-* MS Sandeep Kamath - ISE Dept, RV College of Engineering
-  Github Repo: [https://github.com/mssandeepkamath/](https://github.com/mssandeepkamath/)
+---
 
-### Web Application (Blockchain)
+**6. Add E-commerce Features**  
+   - **Product Catalog:** Create a RecyclerView or GridView to display available products.  
+   - **Product Details:** Show product descriptions, price, and AR view button.  
+   - **Shopping Cart:** Implement functionality to add products to a cart and review selections.  
+   - **Payment Gateway:** Integrate payment options using APIs like Razorpay, Stripe, or PayPal.  
 
-* Karthik Pai - ISE Dept, RV College of Engineering
-  Github Repo: [https://github.com/kptriescoding](https://github.com/kptriescoding)
-* Rakshith Hegde - ISE Dept, RV College of Engineering
-  Github Repo: [https://github.com/RakshithDHegde](https://github.com/RakshithDHegde)
+---
 
+**7. Backend Integration**  
+   - Use Firebase or another backend to manage user accounts, product data, and orders.  
+   - Implement APIs for product retrieval, order placement, and payment processing.  
 
-## Useful Links
+---
 
-* Live demo: [https://flipkartgrid.vercel.app/](https://flipkartgrid.vercel.app/)
-* Web App code: [https://github.com/RakshithDHegde/Grid_4.0_Web](https://github.com/RakshithDHegde/Grid_4.0_Web)
-* YouTube Demo: [https://www.youtube.com/watch?v=U3z-g4FgZS0](https://www.youtube.com/watch?v=U3z-g4FgZS0)
-* Presentation: [https://www.canva.com/design/DAFH6VUw7K8/fb0JkUMVpUqKjKMO6g02Uw/view](https://www.canva.com/design/DAFH6VUw7K8/fb0JkUMVpUqKjKMO6g02Uw/view)
+**8. Design User Interface**  
+   - Create a user-friendly UI using XML for screens like login, product catalog, cart, and checkout.  
+   - Use Material Design components for a modern and responsive look.  
 
-## License
+---
 
-This project is licensed under the Apache License, Version 2.0. For details, visit [http://www.apache.org/licenses/](http://www.apache.org/licenses/).
+**9. Test the Application**  
+   - Test the AR features on ARCore-compatible devices.  
+   - Perform functional testing for browsing, AR placement, cart management, and payments.  
+   - Fix any bugs and optimize app performance.  
+
+---
+
+**10. Publish the App**  
+   - Generate the APK or App Bundle for your app.  
+   - Publish it on the Google Play Store with necessary marketing details like screenshots, descriptions, and keywords.  
+
+---
+
+**Tools and Technologies**  
+- **Android Studio** for app development.  
+- **ARCore SDK** for AR capabilities.  
+- **Firebase** for backend services.  
+- **Sceneform** for rendering 3D models.  
+- **API Integration** for payment and backend communication.  
+
+Let me know if you'd like code snippets or further assistance!
